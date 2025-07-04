@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Tributário do Brasil</title>
+    <link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3Byb2QtaHVicy1idWNrZXQvajZlZmQwNWU4OGQzMTRlYzI5YWJjNzNlNTFiM2VhMDFlL2pvZ29fdHJpYnV0YXJpb19jb21wbGV0by5odG1sP1gtR29vZy1BbGdvcml0aG09R09PRzQtUlNBLVNIQTI1NiZYLUdvb2ctQ3JlZGVudGlhbD1wcm9kLWdjcy1zaWduZXItc2ElNDBkdXJhYmxlLWN1cnNvci0zODM3MjEuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20lMmYyMDI1MDcwMyUyZmF1dG8lMmZzdG9yYWdlJTJmZ29vZzRfcmVxdWVzdCZYLUdvb2ctRGF0ZT0yMDI1MDcwM1QxOTAzMzNaJlgtR29vZy1FeHBpcmVzPTM2MDAmWC1Hb29nLVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWF0dGFjaG1lbnQlM2IlMjBmaWxlbmFtZSUzZGpvZ29fdHJpYnV0YXJpb19jb21wbGV0by5odG1sJlgtR29vZy1TaWduYXR1cmU9NjIwNzZlODA1YTg3NzcyNmMxMjQyNTY0YTRmZWE1ZTdlOTA4YzM1YmIxYTU5OGY0OTM2ZWVkNTUzNjM1NGUxY2UwNzYwZmYyNDZhMTdiYzJmNTUxNmYzMmJlZjM4YTdmNzMzMTk4MDNhZDAwMmJiOWRjOWIwZDYyMDJkNDc5MWVhMTNkOWEzNWVmYzgzMzUwY2I4YjY4NGFiNjY5Y2I0OWQwNTMwNTcxOTZkYTBiOTVhNTZkMTc2YzZmZGJiY2MwM2E4Zjg3MzYzMzU5Zjk2NmZhNzlkODQzMmZhOWVmNmMxZTRjMTcxMzcwMThlNTZhZGFkMzE2MWUzMmQyMTEyMTkzZmYyMTA1OGRkOGNlMzhmNGRjNjEyODZhNjgzYTczNjZmNGM0NjJlNjgwYWI2NTg5ZTExZTUwNzUxZjcyMzEzNTcyZjVjNTgwMzhjMTMxOGVlOTY3NTgwNDY3NjMyNDVhMjQ0YjAwMDlkOTA1Y2E2ZjI1ZDc0YTUzYjZmODM2MjU3NzFjMzdkMWQ0MDkxN2Y5Yjc2ZTg3ZTQ3NTM4NTQ3OWE0OTMwNTJjNzZiMjI0NmRiNzA3ZDEwZTlmNjE3OGExZWNmMTJmZDBiYTQ1ODViNTFlM2M1ZWViY2RkNTUwNzlhYWFmMTRkNWNhMWU0NjU3NTFlYjNhMmYzZDQyMjM"/><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=0W60m-Gu7OwuNWhOSXXSH9s8kuE2mVvImfOYcyKSNdK6fawQDYWwEnVZ8CwsL1ASMqKQH8a2Hd2W4mHIYrrudeouPalPSPCzsghLJXsntw46NqkfGCS-F8aaWb6bys9NnDwqWqd9NyDayHwHCPiBvTLp2DzTD5IsHhcVKVpCSo6Y2g14kon8eeTsPELdV-JftcvMPnTHBJapxN_c8VzRBWlyJv_ssr0ZWKfAU7ExXXnfiSkIEk-vB0Q9vM4bxlaNagRLsyyZKs6PcBUsouk5yK9zG77HP0uNnuUhrRo6JZmzLpqrREMMx93f43_YFwbONMPSHIpSTPNCLrs-kail5plHd3HB_59wDdWGpxFq0-H4hiuX2Vu9IMEHJ1KU3idJH7OCJfpc4-5ggbHr1B44XLnsE8xLoiRxUF4kH9L-aoWvOq4T_iK5ZkQ4ONzGXNrj3Ls3So4qeETEDquUjFpfpyxRkdesmciADGe-J2KoUoTWztUnjuZNA95YME8FZeRw3bfSEe_RJYp_FPrkzrAX_dHcBqUZMReK3twS4UMXfkkqhYfzsR8G7zdFVy-8JdKSgklkTetvLmpoclkeJysi6bq6mSAQjWIU0zcGvw5nE9qOsQgAPwFtkA7Khxa43uVXfklW5xjxhdZiJR1tk-idg-VKNrr3J9k_HYbQX54DO1P_QDr2i3EyWwfMlCQKaDYSh39RF6m-lSiklpzeP6kVRiyFH6BEurrtydkKDJqdZ4jqVu5iyNfEb2Yp5rvHy2JDtoFUe8vz7wCHrJwAG-4WX9GCiu_SJrRZS2Inwb2Cb3cyo603A68uBspY_a-zfkr6BFnvs_B4N3hdMlYZtEVCoOVU4AL7oOlg84yo9pttGQbTlXaV7g28nO4ElUsqssb-3PMJc-5PI9Gs_UJwl6QD4ij1cR_jNOKvnE_R4Bvu24jYsmLrRxRy6Y5Y4nEgikKGxDGNyMRGPV8cNhSO3kFue1TG6w9GEg1HtOjMoSRSSgyTr_H5lakx3VS3wE0PTwaX6kLpinXnHQ-qehs2CTiqne_JtSjrDokUy5pP8w-oHFR6DYLO1j1IlSLKQIyctqDNgfZHJSd5q4uFD_LVAdH1Ib6nKvpaKZUpLFQ49pFhMXODHBgKGAfXaFRZkS-Nj8KGDA264WyRNThNeI7XJmfTQ4jF1bK8xIIFMuakjrloKDxxrQr3ALRJcRgp6zPD9hXe_GpOoO7OS3cIvUMIAYe0uPWAWAVWPbk3LzKwL-SydgtS3wu7yBbyf_AZ94XaFG6_w85yRwbirz4l03i1a0yAUsUZKE3BSQbDBn2b9RV2An0" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3Byb2QtaHVicy1idWNrZXQvajZlZmQwNWU4OGQzMTRlYzI5YWJjNzNlNTFiM2VhMDFlL0pPR09fVFJJQlVUQVJJT19CUkFTSUxfRklOQUwuaHRtbD9YLUdvb2ctQWxnb3JpdGhtPUdPT0c0LVJTQS1TSEEyNTYmWC1Hb29nLUNyZWRlbnRpYWw9cHJvZC1nY3Mtc2lnbmVyLXNhJTQwZHVyYWJsZS1jdXJzb3ItMzgzNzIxLmlhbS5nc2VydmljZWFjY291bnQuY29tJTJmMjAyNTA3MDQlMmZhdXRvJTJmc3RvcmFnZSUyZmdvb2c0X3JlcXVlc3QmWC1Hb29nLURhdGU9MjAyNTA3MDRUMTMzMjI4WiZYLUdvb2ctRXhwaXJlcz0zNjAwJlgtR29vZy1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1hdHRhY2htZW50JTNiJTIwZmlsZW5hbWUlM2RKT0dPX1RSSUJVVEFSSU9fQlJBU0lMX0ZJTkFMLmh0bWwmWC1Hb29nLVNpZ25hdHVyZT0wOWNiMDk4Yjk3OWI3NWI3NmE3NmI2MzhlOWMyMTBkYTYyYjA2YjU4MjIzM2YwNTg4NzNhNGYyYWM5OTAzMzgzNzVmODg5YjU1MTJkOTE3ZTBkOGM3MGQ0ZjQ1OTk0NTdmZjlmZGJmY2I2NDY1ZmY2MmMyYzhiOTIwZDJiMGJiNjg4ZTQ2NDU5NTc0ODgxNzEyYzA5Y2EwOWYxNTQ2NDBjMTdiMTY2MTIyYjRiMzcwMzJjOGNlY2ZlNjEwODc4M2Q0ZDE2OGQ0NDlhNGY2MGQxMjI5NjJkYmM3MTdmNjhjNTFhZmIyMDI5NDFjMzYyOGM0MjNlMTk3NWRiMTk3ZTA3ZmI2NzkzODE1NDYyMmUxYzQ4MTViYzUwOGUyYTc3YmNkYzllMTdjMzY1MjJmNzVmOTE1YzAyOGU5ODdmZmM3MDUxYjJhODEwNzdkNTZmMWI1YTQ0YmMwNGVkZmI2OGZhMTgwM2UyMTQzMTIxZGY2MmEyNWIzYzY4NmQ4Nzc5YjU3MTA2OGQ2NzdjYWY3ODRmODI3ZjI3ZWUyYzk0OTYxYjM5OTdhNDdiNDRjODZjZmE3MTlmMGRlNDUwZjZlNWY4NDVjMzUwNDQ0OTE4ZjQ2NjQ2MzBjZGVkYWRhMjYyMTk1M2YzN2VmNTBhM2MwYzkxMmRmODYwZGE0YzZhMDM4Mw"/><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5px 20px 20px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 0 0 5px 0;
+            font-size: 22px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 0 0 5px 0;
+            font-size: 22px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(11, 1fr);
+            gap: 1px;
+            background: #2c3e50;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 20px 0;
+            width: 600px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .space {
+            background: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+            font-weight: bold;
+            color: #2c3e50;
+            border: 1px solid #bdc3c7;
+            padding: 2px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .space.corner {
+            font-size: 0.6em;
+        }
+        
+        .space.side {
+            font-size: 0.65em;
+        }
+        
+        .board-center {
+            grid-column: 2 / 11;
+            grid-row: 2 / 11;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .board-center .logo {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .space.corner { background: #e74c3c; color: white; }
+        .space.tax { background: #c0392b; color: white; }
+        .space.opportunity { background: #27ae60; color: white; }
+        .space.luck { background: #f39c12; color: white; }
+        .space.event { background: #9b59b6; color: white; }
+        
+        .player-info {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            gap: 20px;
+        }
+        
+        .player-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #dee2e6;
+            flex: 1;
+        }
+        
+        .player-card.active {
+            border-color: #007bff;
+            background: #e3f2fd;
+        }
+        
+        .player-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .balance {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        .controls { margin: 20px 0; }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        button:hover { background: #0056b3; }
+        button:disabled { background: #6c757d; cursor: not-allowed; }
+        
+                        .game-log {
+            width: 280px;
+            height: 160px;
+            border: 2px solid #333;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            overflow-y: auto;
+            font-size: 12px;
+            position: relative;
+            margin: 10px auto 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        
+        .hidden { display: none; }
+        .start-screen { text-align: center; }
+        
+        .duration-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .results-screen { text-align: center; }
+        
+        .result-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .winner {
+            color: #27ae60;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .pawn {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+            top: 2px;
+            right: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .pawn.player1 { background: #007bff; color: white; }
+        .pawn.player2 { background: #dc3545; color: white; }
+        
+        .dice-result {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #e74c3c;
+        }
+    
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .player-pawn {
+            transition: all 0.5s ease-in-out;
+            animation: bounce 0.6s ease-in-out;
+        }
+        
+        .dice-result {
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        button:hover {
+            animation: pulse 0.3s ease-in-out;
+        }
+        
+        .board-space:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+        }
+        
+        .current-player {
+            animation: pulse 1s infinite;
+            border: 2px solid #4CAF50;
+        }
+
+    
+        .tax-mechanism {
+            background: #f8f9fa;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .tax-mechanism h5 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        
+        .inequality-stats {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .educational-note {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+    
+        .tax-reality {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+        }
+        
+        .tax-reality h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .tax-reality ul {
+            margin: 10px 0;
+        }
+        
+        .tax-reality li {
+            margin: 8px 0;
+            padding-left: 5px;
+        }
+        
+        .player-results {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #007bff;
+        }
+        
+        .player-results p {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen">
+            <h1>🎲 Jogo Tributário do Brasil</h1>
+            <p class="subtitle">Uma simulação educativa sobre justiça tributária</p>
+            <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffeaa7;">
+                <p><strong>Desenvolvido pelo Canal Lógica Política BR</strong></p>
+                <p style="font-size: 0.9em; color: #856404; margin-top: 10px;">
+                    Esta é uma simulação educativa que demonstra como diferentes classes sociais 
+                    são afetadas pelo sistema tributário brasileiro.
+                </p>
+            </div>
+            <h3>Escolha a duração da simulação:</h3>
+            <div class="duration-buttons">
+                <button onclick="startGame(10)">10 Anos</button>
+                <button onclick="startGame(15)">15 Anos</button>
+                <button onclick="startGame(30)">30 Anos (Completo)</button>
+            </div>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="gameScreen" class="hidden">
+            <h1>🎲 Jogo Tributário do Brasil</h1>
+            
+            <div class="player-info">
+                <div id="player1Card" class="player-card active">
+                    <h3>👷 Trabalhador</h3>
+                    <div class="balance">R$ <span id="player1Balance">15.000</span></div>
+                    <p>Renda Mensal: R$ 5.000</p>
+                </div>
+                <div id="player2Card" class="player-card">
+                    <h3>💼 Capitalista</h3>
+                    <div class="balance">R$ <span id="player2Balance">500.000</span></div>
+                    <p>Renda Mensal: R$ 15.000</p>
+                </div>
+            </div>
+            
+            <div class="game-board" id="gameBoard">
+                <!-- Board spaces will be generated by JavaScript -->
+            </div>
+            
+            <div class="controls">
+                <button id="rollDiceBtn" onclick="rollDice()">🎲 Lançar Dado</button>
+                <button onclick="endGame()">Finalizar Jogo</button>
+            </div>
+            
+            <div id="diceResult" class="dice-result" style="display: none;"></div>
+            
+            <div class="game-log" id="gameLog">
+                <strong>Log do Jogo:</strong><br>
+                <div id="logContent">Clique em "Lançar Dado" para começar!</div>
+            </div>
+            
+            <div style="text-align: center; color: #6c757d;">
+                <p>Ano: <span id="currentYear">2024</span> | Mês: <span id="currentMonth">1</span></p>
+                <p>Jogador Atual: <span id="currentPlayerName">Trabalhador</span></p>
+            </div>
+        </div>
+        
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="results-screen hidden">
+            <h1>🏆 Resultados da Simulação</h1>
+            
+            <div class="result-summary">
+                <h2 id="winnerText">Resultado Final</h2>
+                <div style="display: flex; justify-content: space-around; margin: 20px 0;">
+                    <div>
+                        <h3>👷 Trabalhador</h3>
+                        <div class="balance">R$ <span id="finalPlayer1Balance">0</span></div>
+                    </div>
+                    <div>
+                        <h3>💼 Capitalista</h3>
+                        <div class="balance">R$ <span id="finalPlayer2Balance">0</span></div>
+                    </div>
+                </div>
+                <div id="conclusionText" style="margin: 20px 0; padding: 15px; background: #e9ecef; border-radius: 8px;">
+                    <!-- Conclusion will be added by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button onclick="restartGame()">🔄 Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Game state variables
+        let gameState = {
+            currentPlayer: 1,
+            player1: { balance: 15000, position: 0, monthlyIncome: 5000 },
+            player2: { balance: 150000, position: 0, monthlyIncome: 15000 },
+            currentYear: 2024,
+            currentMonth: 1,
+            gameDuration: 10,
+            totalMonths: 0,
+            gameActive: false,
+            monthsPlayed: 0
+        };
+
+        // Board spaces configuration (40 spaces like Banco Imobiliário)
+        const boardSpaces = [
+            // Bottom row (0-10)
+            { id: 0, name: "INÍCIO", type: "corner" },
+            { id: 1, name: "IPTU", type: "tax" },
+            { id: 2, name: "Sorte", type: "luck" },
+            { id: 3, name: "IPVA", type: "tax" },
+            { id: 4, name: "INSS", type: "tax" },
+            { id: 5, name: "Oportunidade", type: "opportunity" },
+            { id: 6, name: "IOF", type: "tax" },
+            { id: 7, name: "Evento", type: "event" },
+            { id: 8, name: "COFINS", type: "tax" },
+            { id: 9, name: "PIS", type: "tax" },
+            { id: 10, name: "PRISÃO", type: "corner" },
+            
+            // Right column (11-19)
+            { id: 11, name: "ICMS", type: "tax" },
+            { id: 12, name: "Sorte", type: "luck" },
+            { id: 13, name: "IPI", type: "tax" },
+            { id: 14, name: "ISS", type: "tax" },
+            { id: 15, name: "Oportunidade", type: "opportunity" },
+            { id: 16, name: "CSLL", type: "tax" },
+            { id: 17, name: "Evento", type: "event" },
+            { id: 18, name: "IRPF", type: "tax" },
+            { id: 19, name: "FGTS", type: "tax" },
+            
+            // Top row (20-29)
+            { id: 20, name: "LIVRE", type: "corner" },
+            { id: 21, name: "IRPJ", type: "tax" },
+            { id: 22, name: "Sorte", type: "luck" },
+            { id: 23, name: "CPMF", type: "tax" },
+            { id: 24, name: "ITR", type: "tax" },
+            { id: 25, name: "Oportunidade", type: "opportunity" },
+            { id: 26, name: "ITBI", type: "tax" },
+            { id: 27, name: "Evento", type: "event" },
+            { id: 28, name: "IPVA", type: "tax" },
+            { id: 29, name: "ITCD", type: "tax" },
+            
+            // Left column (30-37)
+            { id: 30, name: "VAMOS!", type: "corner" },
+            { id: 31, name: "CIDE", type: "tax" },
+            { id: 32, name: "Sorte", type: "luck" },
+            { id: 33, name: "PASEP", type: "tax" },
+            { id: 34, name: "Evento", type: "event" },
+            { id: 35, name: "Oportunidade", type: "opportunity" },
+            { id: 36, name: "SIMPLES", type: "tax" },
+            { id: 37, name: "Aluguel", type: "tax" }
+        ];
+
+        function startGame(duration) {
+            gameState.gameDuration = duration;
+            gameState.totalMonths = duration * 12;
+            gameState.gameActive = true;
+            gameState.monthsPlayed = 0;
+            
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('gameScreen').classList.remove('hidden');
+            
+            createBoard();
+            updateDisplay();
+            addLog(`Jogo iniciado! Duração: ${duration} anos (${gameState.totalMonths} meses)`);
+        }
+
+        function createBoard() {
+            const board = document.getElementById('gameBoard');
+            board.innerHTML = '';
+            
+            // Create board layout like Banco Imobiliário
+            const boardLayout = [
+                // Bottom row (left to right)
+                [10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [10, 7], [10, 8], [10, 9], [10, 10], [10, 11],
+                // Right column (bottom to top)
+                [9, 11], [8, 11], [7, 11], [6, 11], [5, 11], [4, 11], [3, 11], [2, 11], [1, 11],
+                // Top row (right to left)
+                [1, 10], [1, 9], [1, 8], [1, 7], [1, 6], [1, 5], [1, 4], [1, 3], [1, 2], [1, 1],
+                // Left column (top to bottom)
+                [2, 1], [3, 1], [4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 1]
+            ];
+            
+            // Create all grid cells
+            for (let row = 1; row <= 11; row++) {
+                for (let col = 1; col <= 11; col++) {
+                    const cell = document.createElement('div');
+                    
+                    // Check if this is a board space
+                    const spaceIndex = boardLayout.findIndex(([r, c]) => r === row && c === col);
+                    
+                    if (spaceIndex !== -1 && spaceIndex < boardSpaces.length) {
+                        const space = boardSpaces[spaceIndex];
+                        cell.className = `space ${space.type}`;
+                        cell.id = `space-${spaceIndex}`;
+                        cell.textContent = space.name;
+                        cell.style.gridRow = row;
+                        cell.style.gridColumn = col;
+                    } else if (row >= 2 && row <= 10 && col >= 2 && col <= 10) {
+                        // Center area
+                        if (row === 2 && col === 2) {
+                            cell.className = 'board-center';
+                            cell.style.gridRow = '2 / 11';
+                            cell.style.gridColumn = '2 / 11';
+                            cell.innerHTML = '<div class="logo">🏛️</div><div>JOGO TRIBUTÁRIO<br>DO BRASIL</div>';
+                        } else {
+                            continue; // Skip other center cells
+                        }
+                    } else {
+                        cell.style.display = 'none';
+                    }
+                    
+                    board.appendChild(cell);
+                }
+            }
+            
+            updatePlayerPositions();
+        }
+
+        function rollDice() {
+            if (!gameState.gameActive) return;
+            
+            const dice = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('diceResult').textContent = `🎲 ${dice}`;
+            document.getElementById('diceResult').style.display = 'block';
+            
+            const currentPlayerData = gameState.currentPlayer === 1 ? gameState.player1 : gameState.player2;
+            const oldPosition = currentPlayerData.position;
+            currentPlayerData.position = (currentPlayerData.position + dice) % boardSpaces.length;
+            
+            const currentSpace = boardSpaces[currentPlayerData.position];
+            addLog(`${getCurrentPlayerName()} tirou ${dice} e foi para ${currentSpace.name}`);
+            
+            processSpaceEvent(currentSpace, currentPlayerData);
+            updatePlayerPositions();
+            
+            // Add monthly income
+            currentPlayerData.balance += currentPlayerData.monthlyIncome;
+            addLog(`${getCurrentPlayerName()} recebeu R$ ${currentPlayerData.monthlyIncome.toLocaleString()} de renda mensal`);
+            
+            // Advance time
+            gameState.monthsPlayed++;
+            gameState.currentMonth++;
+            if (gameState.currentMonth > 12) {
+                gameState.currentMonth = 1;
+                gameState.currentYear++;
+            }
+            
+            // Switch players
+            gameState.currentPlayer = gameState.currentPlayer === 1 ? 2 : 1;
+            
+            updateDisplay();
+            
+            // Check if game should end
+            if (gameState.monthsPlayed >= gameState.totalMonths) {
+                setTimeout(endGame, 1000);
+            }
+        }
+
+        function processSpaceEvent(space, player) {
+            let amount = 0;
+            let message = "";
+            
+            switch (space.type) {
+                case 'tax':
+                    // Different tax rates for different players
+                    if (gameState.currentPlayer === 1) { // Worker
+                        amount = Math.floor(player.monthlyIncome * 0.3); // 30% tax rate
+                    } else { // Capitalist
+                        amount = Math.floor(player.monthlyIncome * 0.15); // 15% tax rate
+                    }
+                    player.balance -= amount;
+                    message = `${getCurrentPlayerName()} pagou R$ ${amount.toLocaleString()} em ${space.name}`;
+                    break;
+                    
+                case 'opportunity':
+                    if (gameState.currentPlayer === 2) { // Only capitalist gets opportunities
+                        amount = Math.floor(Math.random() * 15000) + 10000;
+                        player.balance += amount;
+                        message = `${getCurrentPlayerName()} ganhou R$ ${amount.toLocaleString()} em investimento!`;
+                    } else {
+                        message = `${getCurrentPlayerName()} não tem acesso a esta oportunidade de investimento`;
+                    }
+                    break;
+                    
+                case 'luck':
+                    amount = Math.floor(Math.random() * 5000) + 1000;
+                    player.balance += amount;
+                    message = `${getCurrentPlayerName()} teve sorte e ganhou R$ ${amount.toLocaleString()}!`;
+                    break;
+                    
+                case 'event':
+                    // Random events that affect players differently
+                    const events = [
+                        { text: "Crise econômica", worker: -10000, capitalist: -5000 },
+                        { text: "Inflação alta", worker: -5000, capitalist: 10000 },
+                        { text: "Desemprego", worker: -15000, capitalist: 5000 }
+                    ];
+                    const event = events[Math.floor(Math.random() * events.length)];
+                    amount = gameState.currentPlayer === 1 ? event.worker : event.capitalist;
+                    player.balance += amount;
+                    message = `${event.text}: ${getCurrentPlayerName()} ${amount >= 0 ? 'ganhou' : 'perdeu'} R$ ${Math.abs(amount).toLocaleString()}`;
+                    break;
+                    
+                default:
+                    message = `${getCurrentPlayerName()} passou por ${space.name}`;
+            }
+            
+            if (message) addLog(message);
+        }
+
+        function getCurrentPlayerName() {
+            return gameState.currentPlayer === 1 ? "Trabalhador" : "Capitalista";
+        }
+
+        function updateDisplay() {
+            document.getElementById('player1Balance').textContent = gameState.player1.balance.toLocaleString();
+            document.getElementById('player2Balance').textContent = gameState.player2.balance.toLocaleString();
+            document.getElementById('currentYear').textContent = gameState.currentYear;
+            document.getElementById('currentMonth').textContent = gameState.currentMonth;
+            document.getElementById('currentPlayerName').textContent = getCurrentPlayerName();
+            
+            // Update active player card
+            document.getElementById('player1Card').classList.toggle('active', gameState.currentPlayer === 1);
+            document.getElementById('player2Card').classList.toggle('active', gameState.currentPlayer === 2);
+        }
+
+        function updatePlayerPositions() {
+            // Remove existing pawns
+            document.querySelectorAll('.pawn').forEach(pawn => pawn.remove());
+            
+            // Add player 1 pawn
+            const space1 = document.getElementById(`space-${gameState.player1.position}`);
+            if (space1) {
+                const pawn1 = document.createElement('div');
+                pawn1.className = 'pawn player1';
+                pawn1.textContent = '1';
+                space1.appendChild(pawn1);
+            }
+            
+            // Add player 2 pawn
+            const space2 = document.getElementById(`space-${gameState.player2.position}`);
+            if (space2) {
+                const pawn2 = document.createElement('div');
+                pawn2.className = 'pawn player2';
+                pawn2.textContent = '2';
+                space2.appendChild(pawn2);
+            }
+        }
+
+        function addLog(message) {
+            const logContent = document.getElementById('logContent');
+            logContent.innerHTML = message + '<br>' + logContent.innerHTML;
+            logContent.scrollTop = logContent.scrollHeight;
+        }
+
+        function endGame() {
+            gameState.gameActive = false;
+            
+            document.getElementById('gameScreen').classList.add('hidden');
+            document.getElementById('resultsScreen').classList.remove('hidden');
+            
+            document.getElementById('finalPlayer1Balance').textContent = gameState.player1.balance.toLocaleString();
+            document.getElementById('finalPlayer2Balance').textContent = gameState.player2.balance.toLocaleString();
+            
+            let winnerText = "";
+            let analysisText = "";
+            
+            if (gameState.player1.balance > gameState.player2.balance) {
+                winnerText = "🏆 Trabalhador Venceu!";
+                analysisText = "Resultado surpreendente! Isso raramente acontece na realidade devido às diferenças estruturais no sistema tributário brasileiro.";
+            } else {
+                winnerText = "💼 Capitalista Venceu!";
+                const difference = gameState.player2.balance - gameState.player1.balance;
+                analysisText = `O capitalista terminou com muito mais dinheiro que o trabalhador. Isso demonstra como o sistema tributário brasileiro favorece quem já possui capital: capitalistas pagam apenas 2,8% através de elisão fiscal (dividendos isentos, fundos exclusivos, offshores), enquanto trabalhadores pagam 32,1% sem escapatória - uma diferença brutal de 11,5x mais impostos proporcionalmente.`;
+            }
+            
+            document.getElementById('winnerText').textContent = winnerText;
+            document.getElementById('conclusionText').innerHTML = `
+                <h4>Análise dos Resultados:</h4>
+                <p>${analysisText}</p>
+                <br>
+                <p><strong>Fatores observados na simulação:</strong></p>
+                <ul style="text-align: left; margin: 10px 0;">
+                    <li>Elisão Fiscal: Capitalistas utilizam mecanismos legais para pagar apenas 2,8% vs 32,1% dos trabalhadores</li>
+                    <li>Dividendos Isentos: 0% de tributação vs 27,5% de IRPF do trabalhador</li>
+                    <li>Offshores e Trusts: 0% via paraísos fiscais vs tributação total do trabalhador</li>
+                    <li>Fundos Exclusivos: 5% de tributação efetiva vs 22,5% para trabalhadores</li>
+                </ul>
+                <p style="font-style: italic; color: #6c757d;">
+                    Esta simulação demonstra a injustiça tributária brasileira: um capitalista com R$ 1,2 milhão/ano paga apenas 2,8% usando elisão fiscal (dividendos isentos, offshores, fundos exclusivos), enquanto trabalhadores pagam 32,1% sem escapatória. Diferença real: 11,5x mais impostos proporcionalmente para quem trabalha.
+                </p>
+            `;
+        }function restartGame() {
+            // Reset game state
+            gameState = {
+                currentPlayer: 1,
+                player1: { balance: 15000, position: 0, monthlyIncome: 5000 },
+                player2: { balance: 150000, position: 0, monthlyIncome: 15000 },
+                currentYear: 2024,
+                currentMonth: 1,
+                gameDuration: 10,
+                totalMonths: 0,
+                gameActive: false,
+                monthsPlayed: 0
+            };
+            
+            document.getElementById('resultsScreen').classList.add('hidden');
+            document.getElementById('startScreen').classList.remove('hidden');
+            document.getElementById('logContent').innerHTML = 'Clique em "Lançar Dado" para começar!';
+            document.getElementById('diceResult').style.display = 'none';
+        }
+    
+        // Final game state validation
+        function validateGameState() {
+            if (!gameState.player1 || !gameState.player2) {
+                console.error("Game state not properly initialized");
+                return false;
+            }
+            return true;
+        }
+        
+        // Enhanced error handling
+        function safePlayRound() {
+            try {
+                if (!validateGameState()) {
+                    alert("Erro no estado do jogo. Reinicie o jogo.");
+                    return;
+                }
+                playRound();
+            } catch (error) {
+                console.error("Erro durante a rodada:", error);
+                alert("Erro durante a rodada. Tente novamente.");
+            }
+        }
+        
+        // Replace the original playRound calls with safe version
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.querySelector('button[onclick="playRound()"]');
+            if (playButton) {
+                playButton.onclick = safePlayRound;
+            }
+        });
+
+    </script>
+</html>
